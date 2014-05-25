@@ -14,7 +14,7 @@ makeCacheMatrix <- function (x=matrix()) {
   get <- function() x # get the value of the matrix
   setinv <- function(inverse) inv <<- inverse # set the value of the inverse
   getinv <- function() inv # get the value of the inverse
-  list(set = set, get = get, # return a list that contains the 4 subfunctions in one object
+  list(set = set, get = get,
        setinv = setinv,
        getinv = getinv)
 }
@@ -45,8 +45,7 @@ a <- matrix(c(1,3,4,3,2,5,6,7,3),3)
 b <- matrix(c(1,3,4,3,2,5,6,7,8,9,5,4,6,6,3,3),4)
 c <- matrix(c(3,2,3,5,6,8,0,3,2,2,4,6,8,9,0,5,3,4,3,4,6,3,2,2,5),5)
 
-# create 3 new objects for the 3 square matrices by calling the function makeCachematrix
-
+# create 3 new objects for the 3 square matrices
 
 d <- makeCacheMatrix(a)
 e <- makeCacheMatrix(b)
@@ -68,3 +67,13 @@ cacheSolve(f)
 cacheSolve(d)
 
 # COPY PASTE THE CODE AND RUN TO TEST!!!
+# IF YOU WANT TO USE YOUR OWN MATRIX RUN THE FUNCTIONS AND THEN USE THIS CODE
+# BY REMOVING THE '#' :
+
+#        a <- matrix('YOUR_MATRIX')
+#        b <- makeCacheMatrix(a)
+#        cacheSolve(b)
+
+# IF YOU CREATE YOUR OWN MATRIX TRY TO AVOID TO USE A SEQUENSE OF NUMBERS CAUSE
+# THE RESULTING SQUARE MATRIX WILL HAVE A DETERMINANT == O WHICH WILL LEAD 
+# TO AN ERROR.uSE A RANDOM SEQUENSE OF NUMBERS
